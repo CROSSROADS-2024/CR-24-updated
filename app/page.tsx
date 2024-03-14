@@ -1,16 +1,18 @@
-
 'use client';
+import { inter, mohave, poppins } from "./lib/fonts";
+import  './home.css'
 import Image from 'next/image';
 import LogoLanding from '../public/logo_landing.svg';
 import Tiger from '../public/tiger.png';
 import CountdownTimer from './components/Countdown';
 import Marquee from 'react-fast-marquee';
 import CollegeAnimate from './components/CollegeAnimate';
-import FadeUp from './components/FadeUp';
+import Link from 'next/link';
 import Departmental from './components/Departments';
 import Events from './components/Events';
 import Parallelogram from './components/trial';
-import Loading from './components/Loading';
+
+import { RiInstagramLine, RiMailLine } from "react-icons/ri";
 
 
 import OurLegacyVideo from "./components/OurLegacyVideo";
@@ -22,7 +24,7 @@ export default function Home() {
     <main className="max-w-[100vw] overflow-hidden">
       <section
         id="landing"
-        className="flex  min-h-[85vh] w-full flex-col py-10 pt-[90px] overflow-hidden"
+        className="flex  min-h-[85vh] w-full flex-col py-10 pt-[90px]"
       >
         <div className="flex flex-1 flex-col items-center justify-center py-6 sm:flex-row sm:gap-10">
           <Image
@@ -92,47 +94,50 @@ export default function Home() {
           className="absolute  bottom-0 z-[1] w-full "
         />
       </section>
+      <OurLegacyVideo />
+      <Events />
+      <Departmental />
+      <Parallelogram />
+      <AnimatedSponsor />
+      <div>
+      <section className="home_footer bg-[#A7295E]">
 
-
-      <section className=" relative my-10  flex min-h-[300px] w-full items-center justify-center md:min-h-[700px]">
-        <div className="absolute top-0 h-full w-full ">
-          <div className="relative mx-auto flex h-[300px] items-center  justify-center md:h-[700px] md:w-[60vw] ">
-            <Image
-              src="/legacy.png"
-              alt=""
-              width={1080}
-              height={1080}
-              className="absolute left-0 top-0 h-[100px] w-[100px]  animate-spin md:h-[300px] md:w-[300px]"
-              style={{ animationDuration: '4s' }}
-            />
-
-            <Image
-              src="/legacy.png"
-              alt=""
-              width={1080}
-              height={1080}
-              className="absolute bottom-0 right-0 h-[100px] w-[100px]  animate-spin md:h-[300px] md:w-[300px]"
-              style={{ animationDuration: '4s' }}
-            />
+          <div className="text-area">
+            <div className={`${poppins.className} getintouch`}>Get in touch</div>
+            <div className={`${poppins.className} email`}>
+              crossroads@mbcet.ac.in
+            </div>
+          
+          <div className="icon-area">
+            <div className="icons">
+            <Link href="https://www.instagram.com/crossroadsmbcet/?hl=en">
+              <RiInstagramLine color="white" size={"50px"} />
+            </Link>
+            
+              <RiMailLine color="white" size={"50px"} />
+              
+            </div>
+            <div className="seperator" />
+            <div className="nav">
+              <a href="/" className="text">
+                HOME
+              </a>
+              <a href="#events" className="text">
+                EVENTS
+              </a>
+            </div>
+          </div>
+          <div className="copyright">
+            <h3>© 2024 CROSSROADS</h3>
+            <h4>All Rights Reserved</h4>
           </div>
         </div>
-
-        <div className="z-[1] h-[200px] w-[80vw] md:h-[400px] md:w-[45vw] ">
-          <iframe
-            className="mx-auto h-full w-full rounded-xl "
-            src="https://www.youtube.com/embed/QaXcVAkamxc"
-            title="CROSSROADS&#39;23 | After Movie | Mar Baselios College of Engineering and Technology"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          ></iframe>
+        <div className="rainbow">
+          <Image src="/tiger_footer.png"  alt="tiger footer" height={442} width={337}/>
         </div>
-      </section>
-      
-
-      <OurLegacyVideo />
-      <AnimatedSponsor />
-    <Events/>
-      <Departmental/>
-      <Parallelogram/>
+        </section>
+      </div>
     </main>
+
   );
 }
