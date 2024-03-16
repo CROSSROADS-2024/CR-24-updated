@@ -113,8 +113,10 @@ export default function Home() {
             <Link href="https://www.instagram.com/crossroadsmbcet/?hl=en">
               <RiInstagramLine color="white" size={"50px"} />
             </Link>
-            
+            <Link href="mailto:crossroads@mbcet.ac.in">
               <RiMailLine color="white" size={"50px"} />
+            </Link>
+
               
             </div>
             <div className="seperator" />
