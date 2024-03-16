@@ -13,16 +13,16 @@ export default function AnimatedSponsor() {
     console.log(isInView);
 
     if (isInView) {
-      animate("#hand_container", { gap: "110vw" }, { duration: 1, delay: 0.5 });
+      animate("#hand_container", { gap: "110vw" }, { duration: 1, delay: 1.2 });
       animate(
         "#hand_left",
         { transform: "rotate(-30deg) scaleX(-1)" },
-        { duration: 0.5, delay: 0.5 }
+        { duration: 0.5, delay: 1.2 }
       );
       animate(
         "#hand_right",
         { transform: "rotate(30deg)" },
-        { duration: 0.5, delay: 0.5 }
+        { duration: 0.5, delay: 1.2 }
       );
       animate(".sponsor_card", { opacity: 100 }, { duration: 0.5, delay: 0.6 });
     } else if (containerRef.current) {
@@ -36,7 +36,7 @@ export default function AnimatedSponsor() {
   return (
     <motion.section
       ref={containerRef}
-      className="relative flex items-center justify-center pt-20"
+      className="relative flex items-center justify-center pt-20 sm:m-[10%] pb-10 "
     >
       <div className="grid max-w-[90vw] grid-flow-row grid-cols-6 gap-2 md:max-w-[70vw] md:grid-cols-8">
         {SponsorList.map((name, i) => (
@@ -69,6 +69,7 @@ export default function AnimatedSponsor() {
       <motion.div
         id="hand_container"
         className="absolute flex h-full w-full items-center justify-center gap-0"
+        transition={{delay:4}}
       >
         <Image
           id="hand_left"

@@ -1,0 +1,35 @@
+.parallelogram {
+    position: relative;
+    border:  solid transparent;
+    background: transparent;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .parallelogram::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(90deg, #CC3272, #FF6B01 ,#FFFFFF);
+    background-size: 200% auto;
+    z-index: -1;
+    animation: gradient 3s linear infinite;
+    border-radius: 5px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
