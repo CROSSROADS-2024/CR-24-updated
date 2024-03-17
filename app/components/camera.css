@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Pecita';
+    src: url('./../../public/fonts/Pecita.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.camera_wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+.camera {
+    position: relative;
+    width: clamp(300px, 40vw, 385px);
+    min-height: 250px;
+    z-index: initial;
+    background-image: url('/camera.png');
+    background-size: contain;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.camera > .camera_cover {
+    position: absolute;
+    width: calc(100% - 2px);
+    bottom: -10px;
+    left: 0;
+    height: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #ee8f97;
+    z-index: -2;
+}
+
+.camera > .photo_frame {
+    position: absolute;
+    z-index: -1;
+    bottom: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 230px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #93B2F5;
+}
+
+.camera > .photo_frame > img {
+    width: 200px;
+    height: 180px;
+    background-color: beige;
+}
+
+
+.camera p {
+    font-family: 'Pecita', sans-serif;
+}

@@ -207,8 +207,8 @@ export default function TypeformUI({onSubmit, rid ,setRid}) {
                     <div className="bg-gray-200 h-2 rounded-full">
                         <div
                             className="bg-blue-500 h-2 rounded-full"
-                            style={{ width: ${(currentStep / totalSteps) * 100}% }}
-                        ></div>
+                            style={{ width: `${(currentStep / totalSteps) * 100}%` }}
+                            ></div>
                     </div>
                 </div>
                 <div className="text-center mb-4">
