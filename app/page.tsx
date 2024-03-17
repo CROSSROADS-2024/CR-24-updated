@@ -95,7 +95,12 @@ export default function Home() {
       </section>
       <OurLegacyVideo />
 
-   
+      <section
+        id="Events"
+        className="flex min-h-screen w-full flex-col items-center justify-center"
+      >
+        <StackBox />
+      </section>
 
       {/* <Events />
       <Departmental />
