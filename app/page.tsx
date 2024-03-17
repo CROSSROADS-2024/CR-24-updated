@@ -11,12 +11,11 @@ import Link from "next/link";
 import Departmental from "./components/Departments";
 import Events from "./components/Events";
 import Parallelogram from "./components/trial";
-
 import { RiInstagramLine, RiMailLine } from "react-icons/ri";
-
 import OurLegacyVideo from "./components/OurLegacyVideo";
 import AnimatedSponsor from "./components/AnimatedSponsor";
-import StackBox from "./components/CampusAmbassador";
+import CampusAmbassadorBox from "./components/CampusAmbassador";
+import EventBox from "./components/EventBox";
 
 export default function Home() {
   return (
@@ -93,20 +92,24 @@ export default function Home() {
           className="absolute  bottom-0 z-[1] w-full "
         />
       </section>
-      <OurLegacyVideo />
+      <section className="h-full w-full">
+        <OurLegacyVideo />
+      </section>
 
       <section
         id="Events"
-        className="flex min-h-screen w-full flex-col items-center justify-center"
+        className="flex h-full w-full flex-col items-center justify-between gap-10"
       >
-        <StackBox />
+        <CampusAmbassadorBox />
+        {/* <EventBox/> */}
       </section>
 
-      {/* <Events />
-      <Departmental />
+      {/* <Departmental />
       <Parallelogram /> */}
 
-      <AnimatedSponsor />
+      <section className="h-full w-full">
+        <AnimatedSponsor />
+      </section>
 
       <div>
         <section className="home_footer bg-[#A7295E]">

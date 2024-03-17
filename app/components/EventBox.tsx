@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-function CampusAmbassadorBox() {
+function EventBox() {
   return (
    
       <div className="group relative w-[90%] md:h-[400px] h-[250px] p-1 md:w-[60%] ">
@@ -39,4 +39,4 @@ function CampusAmbassadorBox() {
   );
 }
 
-export default CampusAmbassadorBox;
+export default EventBox;
