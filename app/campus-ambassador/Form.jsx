@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { initializeApp } from "firebase/app";
@@ -203,12 +202,12 @@ export default function TypeformUI({onSubmit, rid ,setRid}) {
 
     return (
         <div className="flex justify-center items-center h-screen -mt-20">
-            <div className="bg-white shadow-md rounded-md p-4 max-w-[60%] sm:h-[20%] h-[30%] max-h-[60%] w-full">
+            <div className="bg-white shadow-md rounded-md p-4 max-w-[60%] flex flex-col lg:h-[26%] md:h-[20%] sm:h-[28%] h-[35%] max-h-[70%] w-full">
                 <div className="mb-4">
                     <div className="bg-gray-200 h-2 rounded-full">
                         <div
                             className="bg-blue-500 h-2 rounded-full"
-                            style={{ width: `${(currentStep / totalSteps) * 100}%` }}
+                            style={{ width: ${(currentStep / totalSteps) * 100}% }}
                         ></div>
                     </div>
                 </div>
