@@ -16,7 +16,7 @@ import { RiInstagramLine, RiMailLine } from "react-icons/ri";
 
 import OurLegacyVideo from "./components/OurLegacyVideo";
 import AnimatedSponsor from "./components/AnimatedSponsor";
-import StackBox from "./components/StackBox";
+import StackBox from "./components/CampusAmbassador";
 
 export default function Home() {
   return (
