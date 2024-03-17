@@ -8,14 +8,11 @@ import CountdownTimer from "./components/Countdown";
 import Marquee from "react-fast-marquee";
 import CollegeAnimate from "./components/CollegeAnimate";
 import Link from "next/link";
-import Departmental from "./components/Departments";
-import Events from "./components/Events";
-import Parallelogram from "./components/trial";
 import { RiInstagramLine, RiMailLine } from "react-icons/ri";
 import OurLegacyVideo from "./components/OurLegacyVideo";
 import AnimatedSponsor from "./components/AnimatedSponsor";
 import CampusAmbassadorBox from "./components/CampusAmbassador";
-import EventBox from "./components/EventBox";
+import FestCard from "./components/FestCard";
 
 export default function Home() {
   return (
@@ -104,9 +101,24 @@ export default function Home() {
         {/* <EventBox/> */}
       </section>
 
-      {/* <Departmental />
-      <Parallelogram /> */}
-
+      <section
+        id="home_dept_fests"
+        className="mt-10 flex flex-col items-center justify-between"
+      >
+        <div className="relative my-4">
+          <Image className="absolute top-0 -left-4" src='/star.png' width={24} height={24} alt="star" />
+          <p className="font-pecita -skew-y-6 text-2xl w-[100px] text-center">coming soon!</p>
+          <Image className="absolute bottom-0 -right-4" src='/star.png' width={24} height={24} alt="star" />
+        </div>
+        <h1 className="heading">DIVE INTO</h1>
+        <p>the technical fests of MCBET</p>
+        <div className="my-10 flex flex-col md:flex-row gap-8 h-full mt-[150px]">
+          <FestCard src="/hash.png" name="CSE Dept. Tech Fest" primary="#FF6B01" secondary="#CC3272" />
+          <FestCard src="/adharva.png" name="ECE Dept. Tech Fest" primary="#CC3272" secondary="#FF6B01" />
+          <FestCard src="/trydan.png" name="EEE Dept. Tech Fest" primary="#FF6B01" secondary="#CC3272" />
+          <FestCard src="/utbav.png" name="CE Dept. Tech Fest" primary="#CC3272" secondary="#FF6B01" />
+        </div>
+      </section>
       <section className="h-full w-full">
         <AnimatedSponsor />
       </section>
