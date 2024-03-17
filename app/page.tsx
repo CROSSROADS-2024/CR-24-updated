@@ -14,6 +14,7 @@ import AnimatedSponsor from "./components/AnimatedSponsor";
 import CampusAmbassadorBox from "./components/CampusAmbassador";
 import FestCard from "./components/FestCard";
 import EventBox from "./components/EventBox";
+import Camera from "./components/Camera"
 
 export default function Home() {
   return (
@@ -100,6 +101,7 @@ export default function Home() {
       >
         <CampusAmbassadorBox />
         <EventBox/>
+        <Camera />
       </section>
       <section
         id="home_dept_fests"
