@@ -10,8 +10,6 @@ export default function AnimatedSponsor() {
   const isInView = useInView(containerRef);
 
   useEffect(() => {
-    console.log(isInView);
-
     if (isInView) {
       animate("#hand_container", { gap: "110vw" }, { duration: 1, delay: 1.0 });
       animate(
