@@ -118,48 +118,14 @@ export default function TypeformUI({ onSubmit, rid, setRid }) {
 
   const renderQuestion = () => {
     return (
-        <div className="flex justify-center items-center h-screen -mt-20">
-            <div className="bg-white shadow-md rounded-md p-4 max-w-[60%] flex flex-col lg:h-[26%] md:h-[20%] sm:h-[28%] h-[35%] max-h-[70%] w-full">
-                <div className="mb-4">
-                    <div className="bg-gray-200 h-2 rounded-full">
-                        <div
-                            className="bg-blue-500 h-2 rounded-full"
-                            style={{ width: `${(currentStep / totalSteps) * 100}%` }}
-                            ></div>
-                    </div>
-                </div>
-                <div className="text-center mb-4">
-                    <span className="text-black ">
-                        Step {currentStep} of {totalSteps}
-                    </span>
-                </div>
-                {submitted ? ( // Render "Congrats" if form submitted successfully
-                    <div className="text-center mb-4 text-green-500 font-bold">Congrats!</div>
-                ) : (
-                    renderQuestion()
-                )}
-                <div className="flex justify-between mt-4">
-                    <button
-                        type="button"
-                        className={`px-4 py-2 rounded-md text-sm font-medium text-white bg-blue-500 ${currentStep === 1 ? "opacity-50 cursor-not-allowed" : ""
-                            }`}
-                        onClick={handlePrevious}
-                        disabled={currentStep === 1}
-                    >
-                        Previous
-                    </button>
-                    <button
-                        type="button"
-                        className={`px-4 py-2 rounded-md text-sm font-medium text-white bg-blue-500 ${!validateCurrentStep() ? "opacity-50 cursor-not-allowed" : ""
-                            }`}
-                        onClick={currentStep === totalSteps ? handleSubmit : handleNext}
-                        disabled={!validateCurrentStep()}
-                    >
-                        {currentStep === totalSteps ? "Submit" : "Next"}
-                    </button>
-                </div>
-            </div>
-        </div>
+      <motion.div
+        key={currentStep}
+        initial={{ opacity: 0, y: currentStep > 1 ? 50 : -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {getCurrentQuestion()}
+      </motion.div>
     );
   };
 
