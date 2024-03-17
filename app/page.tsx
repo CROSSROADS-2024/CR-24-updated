@@ -13,6 +13,7 @@ import OurLegacyVideo from "./components/OurLegacyVideo";
 import AnimatedSponsor from "./components/AnimatedSponsor";
 import CampusAmbassadorBox from "./components/CampusAmbassador";
 import FestCard from "./components/FestCard";
+import EventBox from "./components/EventBox";
 
 export default function Home() {
   return (
@@ -95,10 +96,10 @@ export default function Home() {
 
       <section
         id="Events"
-        className="flex h-full w-full flex-col items-center justify-between gap-10"
+        className="flex h-full w-full flex-col items-center justify-between md:gap-[100px] gap-10"
       >
         <CampusAmbassadorBox />
-        {/* <EventBox/> */}
+        <EventBox/>
       </section>
 
       <section

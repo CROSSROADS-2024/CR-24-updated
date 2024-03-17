@@ -10,7 +10,7 @@ function CampusAmbassadorBox() {
         <div className="absolute top-0 h-[250px] w-full -translate-x-[10px] -translate-y-[10px] border-2 border-black bg-[#F58D14]  transition-all delay-75 group-hover:translate-x-[0px] group-hover:translate-y-[0px] md:h-[400px]"></div>
         {/* Top */}
         <div className="absolute top-0 flex h-[250px] w-full -translate-x-[20px] -translate-y-[20px]  overflow-hidden border-2  border-black bg-[#CC3272]   transition-all  delay-75 group-hover:translate-x-[0px] group-hover:translate-y-[0px] md:h-[400px]">
-          <div className="relative flex h-full w-full">
+          <div className="relative flex h-full md:w-[80%] w-full">
             <Image
               src="/Tiger-Campus.png"
               alt=""
@@ -20,7 +20,7 @@ function CampusAmbassadorBox() {
             />
           </div>
           <div className="flex w-full flex-col items-end justify-between p-2 pl-0 md:p-5">
-            <Image src="/arrow.svg" alt="" width={40} height={40} />
+            <Image src="/arrow.svg" alt="" width={40} height={40} className="group-hover:rotate-[45deg] transition-all" />
 
             <div className="p-2 md:p-5">
               <h1 className=" eventheading text-right text-[#F58D14]">
