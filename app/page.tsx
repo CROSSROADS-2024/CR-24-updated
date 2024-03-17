@@ -101,7 +101,11 @@ export default function Home() {
       >
         <CampusAmbassadorBox />
         <EventBox/>
-        <Camera />
+      </section>
+      <section className="flex justify-center">
+        <div className="w-full max-w-screen-md">
+          <Camera />
+        </div>
       </section>
       <section
         id="home_dept_fests"

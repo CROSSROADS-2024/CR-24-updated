@@ -1,33 +1,33 @@
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+// import { useEffect, useState } from "react";
+// import { useRouter } from "next/router";
 
-const useLoadingAnimation = () => {
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
+// const useLoadingAnimation = () => {
+//   const [loading, setLoading] = useState(false);
+//   const router = useRouter();
 
-  useEffect(() => {
-    if (router) {
-      const handleStart = () => {
-        setLoading(true);
-      };
+//   useEffect(() => {
+//     if (router) {
+//       const handleStart = () => {
+//         setLoading(true);
+//       };
 
-      const handleComplete = () => {
-        setLoading(false);
-      };
+//       const handleComplete = () => {
+//         setLoading(false);
+//       };
 
-      router.events.on("routeChangeStart", handleStart);
-      router.events.on("routeChangeComplete", handleComplete);
-      router.events.on("routeChangeError", handleComplete);
+//       router.events.on("routeChangeStart", handleStart);
+//       router.events.on("routeChangeComplete", handleComplete);
+//       router.events.on("routeChangeError", handleComplete);
 
-      return () => {
-        router.events.off("routeChangeStart", handleStart);
-        router.events.off("routeChangeComplete", handleComplete);
-        router.events.off("routeChangeError", handleComplete);
-      };
-    }
-  }, [router]);
+//       return () => {
+//         router.events.off("routeChangeStart", handleStart);
+//         router.events.off("routeChangeComplete", handleComplete);
+//         router.events.off("routeChangeError", handleComplete);
+//       };
+//     }
+//   }, [router]);
 
-  return loading;
-};
+//   return loading;
+// };
 
-export default useLoadingAnimation;
+// export default useLoadingAnimation;
