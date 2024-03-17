@@ -13,7 +13,7 @@ export default function AnimatedSponsor() {
     console.log(isInView);
 
     if (isInView) {
-      animate("#hand_container", { gap: "110vw" }, { duration: 1, delay: 1.2 });
+      animate("#hand_container", { gap: "110vw" }, { duration: 1, delay: 1.0 });
       animate(
         "#hand_left",
         { transform: "rotate(-30deg) scaleX(-1)" },
@@ -24,7 +24,7 @@ export default function AnimatedSponsor() {
         { transform: "rotate(30deg)" },
         { duration: 0.5, delay: 1.2 }
       );
-      animate(".sponsor_card", { opacity: 100 }, { duration: 0.5, delay: 0.6 });
+      animate(".sponsor_card", { opacity: 100 }, { duration: 0.5, delay: 1.0 });
     } else if (containerRef.current) {
       animate("#hand_container", { gap: "0" }, { duration: 0 });
       animate("#hand_left", { transform: "rotate(0deg) scaleX(-1)" }, { duration: 0 });

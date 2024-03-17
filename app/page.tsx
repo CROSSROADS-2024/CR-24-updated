@@ -1,23 +1,22 @@
-'use client';
+"use client";
 import { inter, mohave, poppins } from "./lib/fonts";
-import  './home.css'
-import Image from 'next/image';
-import LogoLanding from '../public/logo_landing.svg';
-import Tiger from '../public/tiger.png';
-import CountdownTimer from './components/Countdown';
-import Marquee from 'react-fast-marquee';
-import CollegeAnimate from './components/CollegeAnimate';
-import Link from 'next/link';
-import Departmental from './components/Departments';
-import Events from './components/Events';
-import Parallelogram from './components/trial';
+import "./home.css";
+import Image from "next/image";
+import LogoLanding from "../public/logo_landing.svg";
+import Tiger from "../public/tiger.png";
+import CountdownTimer from "./components/Countdown";
+import Marquee from "react-fast-marquee";
+import CollegeAnimate from "./components/CollegeAnimate";
+import Link from "next/link";
+import Departmental from "./components/Departments";
+import Events from "./components/Events";
+import Parallelogram from "./components/trial";
 
 import { RiInstagramLine, RiMailLine } from "react-icons/ri";
 
-
 import OurLegacyVideo from "./components/OurLegacyVideo";
 import AnimatedSponsor from "./components/AnimatedSponsor";
-
+import StackBox from "./components/StackBox";
 
 export default function Home() {
   return (
@@ -95,51 +94,50 @@ export default function Home() {
         />
       </section>
       <OurLegacyVideo />
-      <Events />
-      <Departmental />
-      <Parallelogram />
-      <AnimatedSponsor />
-      <div>
-      <section className="home_footer bg-[#A7295E]">
 
+   
+
+      {/* <Events />
+      <Departmental />
+      <Parallelogram /> */}
+
+      <AnimatedSponsor />
+
+      <div>
+        <section className="home_footer bg-[#A7295E]">
           <div className="text-area">
             <div className={`${poppins.className} getintouch`}>Get in touch</div>
-            <div className={`${poppins.className} email`}>
-              crossroads@mbcet.ac.in
-            </div>
-          
-          <div className="icon-area">
-            <div className="icons">
-            <Link href="https://www.instagram.com/crossroadsmbcet/?hl=en">
-              <RiInstagramLine color="white" size={"50px"} />
-            </Link>
-            <Link href="mailto:crossroads@mbcet.ac.in">
-              <RiMailLine color="white" size={"50px"} />
-            </Link>
+            <div className={`${poppins.className} email`}>crossroads@mbcet.ac.in</div>
 
-              
+            <div className="icon-area">
+              <div className="icons">
+                <Link href="https://www.instagram.com/crossroadsmbcet/?hl=en">
+                  <RiInstagramLine color="white" size={"50px"} />
+                </Link>
+                <Link href="mailto:crossroads@mbcet.ac.in">
+                  <RiMailLine color="white" size={"50px"} />
+                </Link>
+              </div>
+              <div className="seperator" />
+              <div className="nav">
+                <a href="/" className="text">
+                  HOME
+                </a>
+                <a href="#events" className="text">
+                  EVENTS
+                </a>
+              </div>
             </div>
-            <div className="seperator" />
-            <div className="nav">
-              <a href="/" className="text">
-                HOME
-              </a>
-              <a href="#events" className="text">
-                EVENTS
-              </a>
+            <div className="copyright">
+              <h3>© 2024 CROSSROADS</h3>
+              <h4>All Rights Reserved</h4>
             </div>
           </div>
-          <div className="copyright">
-            <h3>© 2024 CROSSROADS</h3>
-            <h4>All Rights Reserved</h4>
+          <div className="rainbow">
+            <Image src="/tiger_footer.png" alt="tiger footer" height={442} width={337} />
           </div>
-        </div>
-        <div className="rainbow">
-          <Image src="/tiger_footer.png"  alt="tiger footer" height={442} width={337}/>
-        </div>
         </section>
       </div>
     </main>
-
   );
 }
