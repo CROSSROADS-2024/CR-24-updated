@@ -13,7 +13,6 @@ import OurLegacyVideo from "./components/OurLegacyVideo";
 import AnimatedSponsor from "./components/AnimatedSponsor";
 import CampusAmbassadorBox from "./components/CampusAmbassador";
 import FestCard from "./components/FestCard";
-import EventBox from "./components/EventBox";
 
 export default function Home() {
   return (
@@ -99,25 +98,58 @@ export default function Home() {
         className="flex h-full w-full flex-col items-center justify-between md:gap-[100px] gap-10"
       >
         <CampusAmbassadorBox />
-        <EventBox/>
+        {/* <EventBox/> */}
       </section>
-
       <section
         id="home_dept_fests"
         className="mt-10 flex flex-col items-center justify-between"
       >
         <div className="relative my-4">
-          <Image className="absolute top-0 -left-4" src='/star.png' width={24} height={24} alt="star" />
-          <p className="font-pecita -skew-y-6 text-2xl w-[100px] text-center">coming soon!</p>
-          <Image className="absolute bottom-0 -right-4" src='/star.png' width={24} height={24} alt="star" />
+          <Image
+            className="absolute -left-4 top-0"
+            src="/star.png"
+            width={24}
+            height={24}
+            alt="star"
+          />
+          <p className="w-[100px] -skew-y-6 text-center font-pecita text-2xl">
+            coming soon!
+          </p>
+          <Image
+            className="absolute -right-4 bottom-0"
+            src="/star.png"
+            width={24}
+            height={24}
+            alt="star"
+          />
         </div>
         <h1 className="heading">DIVE INTO</h1>
         <p>the technical fests of MCBET</p>
-        <div className="my-10 flex flex-col md:flex-row gap-8 h-full mt-[150px]">
-          <FestCard src="/hash.png" name="CSE Dept. Tech Fest" primary="#FF6B01" secondary="#CC3272" />
-          <FestCard src="/adharva.png" name="ECE Dept. Tech Fest" primary="#CC3272" secondary="#FF6B01" />
-          <FestCard src="/trydan.png" name="EEE Dept. Tech Fest" primary="#FF6B01" secondary="#CC3272" />
-          <FestCard src="/utbav.png" name="CE Dept. Tech Fest" primary="#CC3272" secondary="#FF6B01" />
+        <div className="my-10 mt-[150px] flex h-full flex-col gap-8 md:flex-row">
+          <FestCard
+            src="/hash.png"
+            name="CSE Dept. Tech Fest"
+            primary="#FF6B01"
+            secondary="#CC3272"
+          />
+          <FestCard
+            src="/adharva.png"
+            name="ECE Dept. Tech Fest"
+            primary="#CC3272"
+            secondary="#FF6B01"
+          />
+          <FestCard
+            src="/trydan.png"
+            name="EEE Dept. Tech Fest"
+            primary="#FF6B01"
+            secondary="#CC3272"
+          />
+          <FestCard
+            src="/utbav.png"
+            name="CE Dept. Tech Fest"
+            primary="#CC3272"
+            secondary="#FF6B01"
+          />
         </div>
       </section>
       <section className="h-full w-full">
