@@ -5,7 +5,7 @@ import comingSoonSVG from "../../public/comingsoon.svg";
 
 function EventBox() {
   return (
-    <div className="group relative h-[250px] w-[90%] p-1 md:h-[400px] md:w-[60%] ">
+    <div className="group relative h-[250px] w-[80%] p-1 md:h-[400px] md:w-[60%] ">
       {/* Base */}
       <div className="absolute top-0 h-[250px] w-full border-2 border-black  bg-[#CC3272] md:h-[400px]"></div>
       <div className="absolute top-0 h-[250px] w-full -translate-x-[10px] -translate-y-[10px] border-2 border-black bg-[#F58D14]  transition-all delay-75 group-hover:translate-x-[0px] group-hover:translate-y-[0px] md:h-[400px]"></div>
@@ -25,19 +25,19 @@ function EventBox() {
             <Image src={comingSoonSVG} alt="Coming Soon" className="absolute md:-right-20 md:-top-20 -right-5 -top-16 w-[80%]" />
 
             <h1 className=" eventheading text-left text-[#F58D14]">EVENTS</h1>
-            <h2 className="lg::text-xl text-left text-xs md:text-sm">
+            <h2 className="lg:text-xl text-left text-xs md:text-sm">
               dive into exclusive <br />
               tech & non-tech events
             </h2>
           </div>
         </div>
-        <div className="relative flex h-full w-full md:w-[70%]">
+        <div className="relative flex h-full mt-10 w-full md:w-[60%]">
           <Image
             src="/Tiger-Events.png"
             alt=""
             width={1080}
             height={920}
-            className="absolute bottom-0 left-0 object-contain  "
+            className="absolute bottom-0 left-0 object-contain "
           />
         </div>
       </div>
