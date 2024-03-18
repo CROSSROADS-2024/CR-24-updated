@@ -6,11 +6,18 @@
 }
 
 
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 150px 0; /* Add padding to create space above and below */
+  }
+
 .camera_wrapper {
     position: relative;
     z-index: 10;
+    display: flex;
+    justify-content: center; /* Add this line */
 }
-
 .camera {
     position: relative;
     width: clamp(300px, 40vw, 385px);
@@ -20,7 +27,11 @@
     background-size: contain;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    display: flex; /* Add this line */
+    justify-content: center; /* Add this line */
+    align-items: center; /* Add this line */
 }
+
 
 .camera > .camera_cover {
     position: absolute;
@@ -48,6 +59,7 @@
     align-items: center;
     background-color: #93B2F5;
 }
+
 
 .camera > .photo_frame > img {
     width: 200px;

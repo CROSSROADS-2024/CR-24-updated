@@ -1,4 +1,4 @@
-"use client";
+// Camera.tsx
 import React, { useEffect, useState } from "react";
 import "./camera.css";
 import { motion } from "framer-motion";
@@ -16,46 +16,46 @@ const Camera = () => {
         duration: ANIMATION_DURATION,
         ease: "easeInOut",
         repeat: Infinity,
-        repeatDelay: ANIMATION_DURATION * (photos.length - 1)
-      }
+        repeatDelay: ANIMATION_DURATION * (photos.length - 1),
+      },
     }),
-    hidden: { bottom: 20 }
+    hidden: { bottom: 20 },
   };
 
   return (
-    <div className="camera_wrapper">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.4 }}
-        variants={{
-          visible: { opacity: 1, transform: "translateY(0%)" },
-          hidden: { opacity: 0, transform: "translateY(-100%)" }
-        }}
-      >
-        <div className="camera">
-          {photos.map((photo, index) => (
-            <motion.div
-              className={"photo_frame"}
-              key={index}
-              custom={index}
-              initial={"hidden"}
-              animate={"visible"}
-              variants={variants}
-              style={{ position: "absolute", bottom: "0px" }}
-            >
-              <img src={`/${photo}`} alt="" />
-              <p>{names[index]}</p>
-            </motion.div>
-          ))}
-
-          <div className="camera_cover"></div>
-        </div>
-      </motion.div>
+    <div className="container">
+      <div className="camera_wrapper">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          variants={{
+            visible: { opacity: 1, transform: "translateY(0%)" },
+            hidden: { opacity: 0, transform: "translateY(-100%)" },
+          }}
+        >
+          <div className="camera">
+            {photos.map((photo, index) => (
+              <motion.div
+                className={"photo_frame"}
+                key={index}
+                custom={index}
+                initial={"hidden"}
+                animate={"visible"}
+                variants={variants}
+                style={{ position: "absolute", bottom: "0px" }}
+              >
+                <img src={`/${photo}`} alt="" />
+                <p>{names[index]}</p>
+              </motion.div>
+            ))}
+            <div className="camera_cover"></div>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };
 
 export default Camera;
-
