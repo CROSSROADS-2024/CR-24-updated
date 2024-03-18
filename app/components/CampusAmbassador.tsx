@@ -4,7 +4,7 @@ import React from "react";
 function CampusAmbassadorBox() {
   return (
    
-      <div className="group relative w-[90%] md:h-[400px] h-[250px] p-1 md:w-[60%] ">
+      <div className="group relative  w-[80%] md:h-[400px] h-[250px] p-1 md:w-[60%] ">
         {/* Base */}
         <div className="absolute top-0 h-[250px] w-full border-2 border-black  bg-[#CC3272] md:h-[400px]"></div>
         <div className="absolute top-0 h-[250px] w-full -translate-x-[10px] -translate-y-[10px] border-2 border-black bg-[#F58D14]  transition-all delay-75 group-hover:translate-x-[0px] group-hover:translate-y-[0px] md:h-[400px]"></div>
