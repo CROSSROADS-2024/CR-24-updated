@@ -14,7 +14,7 @@ import AnimatedSponsor from "./components/AnimatedSponsor";
 import CampusAmbassadorBox from "./components/CampusAmbassador";
 import FestCard from "./components/FestCard";
 import EventBox from "./components/EventBox";
-import Camera from "./components/Camera"
+import Camera from "./components/Camera";
 
 export default function Home() {
   return (
@@ -91,21 +91,41 @@ export default function Home() {
           className="absolute  bottom-0 z-[1] w-full "
         />
       </section>
-      <section className="h-full w-full">
+      <section className="relative h-full w-full">
         <OurLegacyVideo />
+        <Image
+          src="/wave.png"
+          alt=""
+          width={1080}
+          height={1080}
+          className="absolute  bottom-0 z-[1] w-full  my-5"
+        />
       </section>
 
       <section
         id="Events"
-        className="flex h-full w-full flex-col items-center justify-between md:gap-[100px] gap-10"
+        className=" flex h-full w-full flex-col items-center justify-between gap-10 md:gap-[100px]"
       >
+       
         <CampusAmbassadorBox />
-        <EventBox/>
+        <EventBox />
       </section>
-      <section className="flex justify-center">
+      <section className="relative flex flex-col items-center justify-center gap-16">
+      <Image
+          src="/wave.png"
+          alt=""
+          width={1080}
+          height={1080}
+          className="absolute  top-0 z-[1] w-full rotate-180 mt-5"
+        />
         <div className="w-full max-w-screen-md">
           <Camera />
         </div>
+        <Marquee autoFill className="flex gap-3 border-y border-gray py-4">
+          <div className="mx-5 h-3 w-3 rounded-full bg-pink" />
+          <p className="text-xl">#ThrowbackCR</p>
+          <div className="mx-5 h-3 w-3 rounded-full bg-pink" />
+        </Marquee>
       </section>
       <section
         id="home_dept_fests"
